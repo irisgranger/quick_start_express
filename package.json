@@ -1,0 +1,21 @@
+{
+  "name": "qse",
+  "version": "1.0.0",
+  "description": "A cli tool to quickstart express apps",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node bin/index.js init"
+  },
+  "author": "Abhinav Ramakrishnan, Ashwin Narayanan S",
+  "license": "ISC",
+  "bin":"./bin/index.js",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "figlet": "^1.7.0",
+    "fs-extra": "^11.2.0",
+    "nanospinner": "^1.1.0"
+  }
+}
