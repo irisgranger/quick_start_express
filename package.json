@@ -1,11 +1,10 @@
 {
   "name": "qse",
   "version": "1.0.0",
-  "description": "A cli tool to quickstart express apps",
+  "description": "A simple CLI tool to generate Express servers from multiple available templates",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node bin/index.js init"
   },
   "author": "Abhinav Ramakrishnan, Ashwin Narayanan S",
