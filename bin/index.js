@@ -31,7 +31,7 @@ program
     const parentDir = path.dirname(__dirname);
     const templatePath = path.join(parentDir, "templates", template.name);
     const destinationPath = path.join(targetDir);
-    const npmInit = chalk.bgWhite.black("npm init");
+    const npmInit = chalk.yellow.bold("npm init");
 
     const initSpinner = createSpinner(`Running ${npmInit}...`).start();
     try {
