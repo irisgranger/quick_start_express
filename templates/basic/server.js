@@ -1,8 +1,10 @@
-const express = require("express");
+import express from "express";
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
+// Using _ as a placeholder for the request object
+// since we're not using it in this route as of now.
+app.get("/", (_, res) => {
   return res.send("Hello World!");
 });
 
