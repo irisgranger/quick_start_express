@@ -8,11 +8,11 @@ A simple CLI tool to generate Express servers from multiple available templates.
 
 View current tool version.
 
-```
+```bash
 qse -v
 ```
 
-```
+```bash
 qse --version
 ```
 
@@ -20,7 +20,7 @@ qse --version
 
 Initialize a basic Express.js server.
 
-```
+```bash
 qse init
 ```
 
@@ -34,7 +34,7 @@ qse init
 
 Clear Directory.
 
-```
+```bash
 qse clear
 ```
 
@@ -45,8 +45,18 @@ qse clear
 </div>
 
 <br>
-                                                                                                         
-# Development Environment Setup
+
+# Install Package from npm
+
+1. Run the following command in the terminal to install the required `node` packages:
+
+```bash
+    npm i -g @cse-25/qse
+```
+
+2. Run any qse commands in the target directory such as `qse init`, `qse clear`, `qse -v` ... etc. 
+
+# Local Development Environment Setup
 
 ### Install Node.js
 
@@ -73,10 +83,13 @@ qse clear
 
    ```bash
    npm link # in the quick_start_express directory
+   ```
+
+   ```bash
    npm link qse # in the target directory
    ```
 
-2. Run any qse commands such as `qse init`, `qse clear`, `qse -v` ... etc.
+2. Run any qse commands in the target directory such as `qse init`, `qse clear`, `qse -v` ... etc. 
 
 ## Developers
 
