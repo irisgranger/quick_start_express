@@ -1,6 +1,6 @@
 # Quick Start Express
 
-A simple CLI tool to generate Express servers from multiple available templates.
+A simple CLI tool to generate Express servers from multiple available templates. [View on NPM](https://www.npmjs.com/package/quick_start_express)
 
 # Commands
 
