@@ -36,12 +36,14 @@ To contribute to this project, please follow the below guidelines:
     ```git
     git push origin <branch_name>
     ```
-7. Once you push the changes to your repo, the Compare & pull request button will appear in GitHub.
+7. Once you push the changes to your repo, the `Contribute` Button will appear in Github.
 8. Click that button and you will be taken to the PR page. Describe what changes you have made and submit the PR.
-    a. Mention the issue link in the PR description.
-    b. If the PR is still a work in progress, start the title with "[WIP]".
-    c. If the PR is complete, start the title with "[COMPLETED]".
-    d. Add @Abhinav-ark or @Ashrockzzz2003 as reviewers.
+    <ol type="a">  
+        <li>Mention the issue link in the PR description.</li>  
+        <li>If the PR is still a work in progress, start the title with "[WIP]".</li>  
+        <li>If the PR is complete, start the title with "[COMPLETED]".</li>  
+        <li>Add "@Abhinav-ark" or "@Ashrockzzz2003" as reviewers.</li>  
+    </ol> 
 9. Wait for the PR to be reviewed by the maintainers.
 10. Make the required changes if the maintainers ask for them.
 11. Once the maintainers approve the PR, the PR will be merged.
