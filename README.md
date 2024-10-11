@@ -1,6 +1,6 @@
 # Quick Start Express
 
-A simple CLI tool to generate Express servers from multiple available templates.
+A simple CLI tool to generate Express servers from multiple available templates. [View on NPM](https://www.npmjs.com/package/quick_start_express)
 
 # Commands
 
@@ -55,6 +55,10 @@ qse clear
 ```
 
 2. Run any qse commands in the target directory such as `qse init`, `qse clear`, `qse -v` ... etc. 
+
+# Contributing
+
+Follow the guidelines in [CONTRIBUTING.md](https://github.com/CSE-25/quick_start_express/tree/main/.github/CONTRIBUTING.md) to contribute to the project.
 
 # Local Development Environment Setup
 
