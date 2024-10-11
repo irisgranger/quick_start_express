@@ -56,6 +56,10 @@ qse clear
 
 2. Run any qse commands in the target directory such as `qse init`, `qse clear`, `qse -v` ... etc. 
 
+# Contributing
+
+Follow the guidelines in [CONTRIBUTING.md](https://github.com/CSE-25/quick_start_express/tree/main/.github/CONTRIBUTING.md) to contribute to the project.
+
 # Local Development Environment Setup
 
 ### Install Node.js
