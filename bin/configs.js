@@ -13,6 +13,16 @@ export const commands = {
   init: {
     command: "init",
     description: "Initialize a new Express server.",
+    options: [
+      {
+        flags: "-t, --template <template>",
+        description: "Specify template to use",
+      },
+    ],
+  },
+  list: {
+    command: "list",
+    description: "List all available commands and options.",
   },
   clear: {
     command: "clear",
@@ -27,6 +37,27 @@ export const templates = {
       {
         name: "express",
         version: "^4.17.1",
+      },
+    ],
+  },
+  express_pg: {
+    name: "express_pg",
+    dependencies: [
+      {
+        name: "express",
+        version: "^4.17.1",
+      },
+      {
+        name: "pg",
+        version: "^8.6.0",
+      },
+      {
+        name: "pg-hstore",
+        version: "^2.3.4",
+      },
+      {
+        name: "sequelize",
+        version: "^6.6.5",
       },
     ],
   },
