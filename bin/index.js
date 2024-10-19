@@ -81,7 +81,7 @@ function initCommand(options) {
   const selectedTemplate = options.template || "basic"; // Default to 'basic' if no template is specified
 
   if (!templates[selectedTemplate]) {
-    console.error(`Template ${selectedTemplate} does not exist.`);
+    console.error(chalk.bgRed.white(`Template ${selectedTemplate} does not exist.`));
     return;
   }
 
@@ -97,6 +97,7 @@ function initCommand(options) {
   const initSpinner = createSpinner(`Running ${npmInit}...`).start();
   try {
     execSync("npm init -y", { stdio: "ignore", cwd: targetDir });
+
     initSpinner.success({ text: `${npmInit} completed successfully.` });
   } catch (err) {
     initSpinner.error({ text: `Error running ${npmInit}:\n` });
@@ -107,9 +108,24 @@ function initCommand(options) {
   const copySpinner = createSpinner("Creating server files...").start();
   try {
     fs.copySync(templatePath, destinationPath);
+
     copySpinner.success({ text: "Created server files successfully." });
   } catch (err) {
     copySpinner.error({ text: "Error creating server files.\n" });
+    console.error(err.message);
+  }
+
+  const addTypeDeclaration = createSpinner("Adding type declaration...").start();
+  try {
+    const packageJsonPath = path.join(targetDir, "package.json");
+    const packageJsonContent = fs.readFileSync(packageJsonPath, "utf8");
+    const packageJson = JSON.parse(packageJsonContent);
+    packageJson.type = "module";
+    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+
+    addTypeDeclaration.success({ text: "Added type declaration successfully." });
+  } catch (err) {
+    addTypeDeclaration.error({ text: "Error adding type declaration.\n" });
     console.error(err.message);
   }
 
@@ -134,6 +150,7 @@ function initCommand(options) {
   const installDependencies = createSpinner("Installing dependency packages...").start();
   try {
     execSync("npm i", { stdio: "ignore", cwd: targetDir });
+
     installDependencies.success({ text: "Installed dependencies successfully." });
   } catch (err) {
     installDependencies.error({ text: "Error installing dependencies.\n" });
