@@ -137,13 +137,13 @@ function initCommand(options) {
   try {
     execSync("npm i", { stdio: "ignore", cwd: targetDir });
     installDependencies.success({ text: "Installed dependencies successfully." });
-
-    console.log(chalk.green.bold("\nSetup complete! To run your server:"));
-    console.log(chalk.yellow("Run:"), chalk.white.bold("npm start"));
   } catch (err) {
     installDependencies.error({ text: "Error installing dependencies.\n" });
     console.error(err);
   }
+
+  console.log(chalk.green.bold("\nSetup complete! To run your server:"));
+  console.log(chalk.yellow("Run:"), chalk.white.bold("npm start"));
 };
 
 const toolIntro = () => {
