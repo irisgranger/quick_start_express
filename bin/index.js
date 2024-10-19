@@ -81,7 +81,7 @@ function initCommand(options) {
   const selectedTemplate = options.template || "basic"; // Default to 'basic' if no template is specified
 
   if (!templates[selectedTemplate]) {
-    console.error(chalk.bgRed.white(`Template ${selectedTemplate} does not exist.`));
+    console.error(chalk.bgRed.white(`Template ${selectedTemplate} does not exist. To see available templates use "qse list".`));
     return;
   }
 

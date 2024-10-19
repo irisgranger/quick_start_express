@@ -9,7 +9,7 @@ export const metadata = {
 export const commands = {
   version: {
     command: "-v, --version",
-    description: "Outputs current tool version",
+    description: "Prints current qse version",
   },
   init: {
     command: "init",
