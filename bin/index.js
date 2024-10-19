@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 const template = templates.basic;
 
 program
-  .version(metadata.version, commands.version.versionFlags)
+  .version(metadata.version, commands.version.command)
   .description(metadata.description);
 
 program
@@ -36,17 +36,13 @@ program
     Object.keys(commands).forEach((cmd) => {
       const commandInfo = commands[cmd];
       if (commandInfo.command) {
-        console.log(`- ${commandInfo.command}: ${commandInfo.description}`);
+        console.log(`- ${commandInfo.command}${commandInfo.description ? ": " + commandInfo.description : ""}`);
       }
 
-      if (commandInfo.options.length > 0) {
+      if (commandInfo.options) {
         commandInfo.options.forEach((option) => {
           console.log(`  (Options: ${option.flags} - ${option.description})`);
         });
-      }
-
-      if (commandInfo.versionFlags) {
-        console.log(`  (Version Flags: ${commandInfo.versionFlags})`);
       }
     });
 

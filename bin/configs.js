@@ -8,7 +8,8 @@ export const metadata = {
 
 export const commands = {
   version: {
-    versionFlags: "-v, --version",
+    command: "-v, --version",
+    description: "Outputs program version",
   },
   init: {
     command: "init",
