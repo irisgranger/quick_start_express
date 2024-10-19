@@ -41,7 +41,7 @@ export const templates = {
       },
     ],
   },
-  express_pg: {
+  express_pg_sequelize: {
     name: "express_pg",
     dependencies: [
       {
