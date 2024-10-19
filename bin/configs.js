@@ -60,6 +60,10 @@ export const templates = {
         name: "sequelize",
         version: "^6.6.5",
       },
+      {
+        name: "dotenv",
+        version: "^16.4.1",
+      },
     ],
   },
 };
