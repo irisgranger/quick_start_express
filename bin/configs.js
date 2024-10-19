@@ -9,7 +9,7 @@ export const metadata = {
 export const commands = {
   version: {
     command: "-v, --version",
-    description: "Outputs program version",
+    description: "Outputs current tool version",
   },
   init: {
     command: "init",
@@ -42,7 +42,7 @@ export const templates = {
     ],
   },
   express_pg_sequelize: {
-    name: "express_pg",
+    name: "express_pg_sequelize",
     dependencies: [
       {
         name: "express",

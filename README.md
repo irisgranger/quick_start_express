@@ -16,9 +16,17 @@ qse -v
 qse --version
 ```
 
+## List
+
+List all available commands and options.
+
+```bash
+qse list
+```
+
 ## Init
 
-Initialize a basic Express.js server.
+Initialize a new Express.js server.
 
 ```bash
 qse init
