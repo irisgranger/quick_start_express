@@ -13,8 +13,6 @@ import { metadata, commands, templates } from "./configs.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const template = templates.basic;
-
 program
   .version(metadata.version, commands.version.command)
   .description(metadata.description);
@@ -25,7 +23,7 @@ program
   .option(commands.init.options[0].flags, commands.init.options[0].description)
   .action((options) => {
     toolIntro();
-    initCommand(options); // Call a new function with options
+    initCommand(options);
   });
 
 program
@@ -41,7 +39,7 @@ program
 
       if (commandInfo.options) {
         commandInfo.options.forEach((option) => {
-          console.log(`  (Options: ${option.flags} - ${option.description})`);
+          console.log(`  (Options: ${option.flags}${option.description ? " - " + option.description : ""})`);
         });
       }
     });
