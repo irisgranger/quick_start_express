@@ -18,9 +18,18 @@ db.authenticate()
     console.error('Unable to connect to the database:', err);
   });
 
-// Define a sample route
 app.get('/', (req, res) => {
   res.send('Hello, Express with PostgreSQL!');
+});
+
+// Dummy route to test DB query
+app.get('/db-test', async (req, res) => {
+  try {
+    const [results, metadata] = await db.query('SELECT NOW()');
+    res.status(200).json({ message: 'DB query successful!', data: results });
+  } catch (error) {
+    res.status(500).json({ message: 'Error querying the database', error });
+  }
 });
 
 // Start the server
