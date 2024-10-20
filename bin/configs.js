@@ -8,11 +8,22 @@ export const metadata = {
 
 export const commands = {
   version: {
-    versionFlags: "-v, --version",
+    command: "-v, --version",
+    description: "Prints current qse version",
   },
   init: {
     command: "init",
     description: "Initialize a new Express server.",
+    options: [
+      {
+        flags: "-t, --template <template>",
+        description: "Specify template to use",
+      },
+    ],
+  },
+  list: {
+    command: "list",
+    description: "List all available commands and options.",
   },
   clear: {
     command: "clear",
@@ -27,6 +38,31 @@ export const templates = {
       {
         name: "express",
         version: "^4.17.1",
+      },
+    ],
+  },
+  express_pg_sequelize: {
+    name: "express_pg_sequelize",
+    dependencies: [
+      {
+        name: "express",
+        version: "^4.17.1",
+      },
+      {
+        name: "pg",
+        version: "^8.6.0",
+      },
+      {
+        name: "pg-hstore",
+        version: "^2.3.4",
+      },
+      {
+        name: "sequelize",
+        version: "^6.6.5",
+      },
+      {
+        name: "dotenv",
+        version: "^16.4.1",
       },
     ],
   },
