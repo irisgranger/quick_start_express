@@ -68,14 +68,6 @@ export const templates = {
   },
   express_mysql: {
     name: "express_mysql",
-    dependenciesa: {
-      "cors": "^2.8.5",
-      "express": "^4.21.1",
-      "fs": "^0.0.1-security",
-      "helmet": "^8.0.0",
-      "mysql2": "^3.11.3",
-      "path": "^0.12.7"
-    },
     dependencies: [
       {
         name: "express",
@@ -97,6 +89,6 @@ export const templates = {
         name: "mysql2",
         version: "^3.11.3",
       },
-    ]
+    ],
   },
 };
