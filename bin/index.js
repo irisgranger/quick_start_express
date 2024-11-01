@@ -14,6 +14,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 program
+  .name(metadata.command)
   .version(metadata.version, commands.version.command)
   .description(metadata.description);
 

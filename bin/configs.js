@@ -1,4 +1,5 @@
 export const metadata = {
+  command: "qse",
   name: "Quick Start Express",
   version: "v1.0.4-beta",
   description:
