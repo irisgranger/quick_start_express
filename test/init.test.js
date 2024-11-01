@@ -89,4 +89,9 @@ describe('init', () => {
         const commandHash = computeSHA256Hash(tempDir);
         expect(commandHash).toEqual(originalHash);
     });
+
+    test('invalid template name passed', async () => {
+        const { stdout, stderr } = await exec(`node ../../bin/index.js init -t invalid_name`, { cwd: tempDir });
+        expect(stderr).toContain(`Template invalid_name does not exist. To see available templates use "qse list".`);
+    });
 });
