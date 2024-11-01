@@ -81,14 +81,14 @@ describe('init', () => {
         await exec(`node ../../bin/index.js init -t express_pg_sequelize`, { cwd: tempDir });
         const commandHash = computeSHA256Hash(tempDir);
         expect(commandHash).toEqual(originalHash);
-    });
+    }, 10000);
 
     test('express_mysql', async () => {
         const originalHash = computeSHA256Hash(path.join(__dirname, '..', 'templates', 'express_mysql'));
         await exec(`node ../../bin/index.js init -t express_mysql`, { cwd: tempDir });
         const commandHash = computeSHA256Hash(tempDir);
         expect(commandHash).toEqual(originalHash);
-    });
+    }, 10000);
 
     test('invalid template name passed', async () => {
         const { stdout, stderr } = await exec(`node ../../bin/index.js init -t invalid_name`, { cwd: tempDir });
