@@ -18,14 +18,17 @@ function clearTempDirectory() {
     }
 }
 
-function traverseDirectory(dirName) {
+function traverseDirectory(dirName, hash) {
     const files = fs.readdirSync(dirName);
 
     for (const file of files) {
         const filePath = path.join(dirName, file);
         const stats = fs.statSync(filePath);
         if (stats.isDirectory()) {
-            traverseDirectory(filePath);
+            traverseDirectory(filePath, hash);
+        } else {
+            const data = fs.readFileSync(filePath);
+            hash.update(data);
         }
     }
 }
@@ -43,7 +46,7 @@ function computeSHA256Hash(dirName) {
         const filePath = path.join(dirName, file);
         const stats = fs.statSync(filePath);
         if (stats.isDirectory()) {
-            traverseDirectory(filePath);
+            traverseDirectory(filePath, hash);
         } else {
             const data = fs.readFileSync(filePath);
             hash.update(data);
