@@ -16,7 +16,7 @@ Available Templates:
 describe('List Command', () => {
     test('list', async () => {
         const { stdout, stderr } = await exec('node bin/index.js list');
-        expect(stdout).toBe(list);
-        expect(stderr).toBe('');
+        expect(stdout).toEqual(list);
+        expect(stderr).toEqual('');
     })
 })

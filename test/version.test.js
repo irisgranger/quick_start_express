@@ -5,17 +5,17 @@ const packageJson = require('../package.json')
 describe('Version Command', () => {
     test('package.json has version', () => {
         expect(packageJson).toHaveProperty('version');
-        expect(typeof packageJson.version).toBe('string');
-        expect(packageJson.version.length > 0).toBe(true);
+        expect(typeof packageJson.version).toEqual('string');
+        expect(packageJson.version.length > 0).toEqual(true);
     });
     test('--version', async () => {
         const { stdout, stderr } = await exec('node bin/index.js --version');
-        expect(stdout).toBe(`v${packageJson.version}\n`);
-        expect(stderr).toBe('');
+        expect(stdout).toEqual(`v${packageJson.version}\n`);
+        expect(stderr).toEqual('');
     })
     test('-v', async () => {
         const { stdout, stderr } = await exec('node bin/index.js -v');
-        expect(stdout).toBe(`v${packageJson.version}\n`);
-        expect(stderr).toBe('');
+        expect(stdout).toEqual(`v${packageJson.version}\n`);
+        expect(stderr).toEqual('');
     })
 })

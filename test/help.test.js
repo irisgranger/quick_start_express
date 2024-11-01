@@ -19,17 +19,17 @@ Commands:
 describe('Help Command', () => {
     test('help', async () => {
         const { stdout, stderr } = await exec('node bin/index.js help');
-        expect(stdout).toBe(help);
-        expect(stderr).toBe('');
+        expect(stdout).toEqual(help);
+        expect(stderr).toEqual('');
     })
     test('--help', async () => {
         const { stdout, stderr } = await exec('node bin/index.js --help');
-        expect(stdout).toBe(help);
-        expect(stderr).toBe('');
+        expect(stdout).toEqual(help);
+        expect(stderr).toEqual('');
     })
     test('-h', async () => {
         const { stdout, stderr } = await exec('node bin/index.js -h');
-        expect(stdout).toBe(help);
-        expect(stderr).toBe('');
+        expect(stdout).toEqual(help);
+        expect(stderr).toEqual('');
     })
 })
