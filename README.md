@@ -19,7 +19,7 @@ qse --version
 ### Output
 
 <div align="center">
-   <img src="https://github.com/irisgranger/screenshots/blob/main/Screenshot%202024-11-04%20080018.png" width="800px"/>
+   <img src="https://github.com/user-attachments/assets/2dc11693-d0e0-4900-a5fb-876c87806570" width="800px"/>
 </div>
 
 ## List
@@ -33,7 +33,8 @@ qse list
 ### Output
 
 <div align="center">
-   <img src="https://github.com/irisgranger/screenshots/blob/main/Screenshot%202024-11-04%20080104.png" width="800px"/>
+   <img src="https://github.com/user-attachments/assets/c4c839f4-761a-479c-8b1f-4ca53eab3458
+   " width="800px"/>
 </div>
 
 ## Init
