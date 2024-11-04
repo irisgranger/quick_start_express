@@ -6,19 +6,27 @@
   "main": "index.js",
   "scripts": {
     "dev": "node bin/index.js init",
-    "test": "jest"
+    "test": "jest",
+    "start": "node server.js"
   },
   "author": "Abhinav Ramakrishnan, Ashwin Narayanan S",
   "license": "ISC",
-  "bin": "./bin/index.js",
+  "bin": {
+    "qse": "bin/index.js"
+  },
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^12.1.0",
     "figlet": "^1.7.0",
     "fs-extra": "^11.2.0",
-    "nanospinner": "^1.1.0"
+    "nanospinner": "^1.1.0",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "jest": "^29.7.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": []
 }
